@@ -6,11 +6,11 @@ IOS Swift Page Indicator View
 # Installation
 Add PageIndicatorView.swift and HexStringToColor.swift to your project
 
-# Usage
+# Usage Example
 ```swift
-self.indicatorView.layoutIfNeeded()
-self.pageIndicator = PageIndicatorView(frame: self.indicatorView.bounds, numberOfIndicator: self.maximumPage)
-self.indicatorView.addSubview(self.pageIndicator)
+self.parentView.layoutIfNeeded()
+self.pageIndicator = PageIndicatorView(frame: self.parentView.bounds, numberOfIndicator: 5)
+self.parentViewView.addSubview(self.pageIndicator)
 ```
 # Custom color
 ```swift
