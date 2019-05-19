@@ -6,7 +6,6 @@
 //  Copyright © 2017 Dat. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class PageIndicatorView: UIView {
@@ -19,8 +18,8 @@ class PageIndicatorView: UIView {
     private var padding:CGFloat = 20
     private var numberOfIndicator = 0
     
-    private let color = UIColor.white
-    private let currentColor = UIColor(hexString: "#8CC63EFF")
+    private let color = UIColor.lightGray
+    private let currentColor = UIColor.black
     
     init(frame: CGRect, numberOfIndicator: Int) {
         super.init(frame: frame)
@@ -73,14 +72,14 @@ class PageIndicatorView: UIView {
     
     // MARK: - PUBLIC
     
-    func setColor(hexString: String)  {
+    func setIndicatorColor(_ color: UIColor)  {
         for i in 1...self.numberOfIndicator {
-            self.scrollView.viewWithTag(i)!.backgroundColor = UIColor(hexString: hexString)
+            self.scrollView.viewWithTag(i)?.backgroundColor = color
         }
     }
     
-    func setCurrentColor(hexString: String)  {
-        self.currentIndicator.backgroundColor = UIColor(hexString: hexString)
+    func setCurrentIndicatorColor(_ color: UIColor)  {
+        self.currentIndicator.backgroundColor = color
     }
     
     func move(toIndex: Int) {

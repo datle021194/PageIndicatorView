@@ -14,8 +14,8 @@ self.parentViewView.addSubview(self.pageIndicator)
 ```
 # Custom color
 ```swift
-self.pageIndicator.setColor(hexString: "#000000FF")
-self.pageIndicator.setCurrentColor(hexString: "#8CC63EFF")
+self.pageIndicator.setIndicatorColor(UIColor.red)
+self.pageIndicator.setCurrentIndicatorColor(UIColor.black)
 ```
 
 # License and Authorship
